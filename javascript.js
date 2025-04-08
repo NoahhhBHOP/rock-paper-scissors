@@ -41,17 +41,19 @@ function playRound(humanChoice) {
     document.getElementById("compWins").textContent = `Computer Score: ${compScore}`;
 // text to display once the score has reached the maximum winning ammount to also reset the game
     if (humanScore === 5) {
-        document.getElementById("info").textContent =
-        `You have won the game!`;
         resetScores();
+        document.getElementById("info").textContent =
+        `You have won the game!`; 
     } else if (compScore === 5) {
-        document.getElementById("info").textContent =
-        `You have lost the game!`;
         resetScores();
+        document.getElementById("info").textContent =
+        `You have lost the game!`; 
     }
 }
 // function that resets scores and in turn resets the game 
 function resetScores() {
         humanScore = 0;
+        document.getElementById("humWins").textContent = `Human Score: ${humanScore}`;
         compScore = 0;
+        document.getElementById("compWins").textContent = `Computer Score: ${compScore}`;
     };
